@@ -23,10 +23,20 @@
 
 #pragma once
 
-#include "ecal_win_socket.h"
+#include "../ecal/ecal_os.h"
 
-#include <string>
+#ifdef ECAL_OS_WINDOWS
+#include "ecal_win_socket.h"
+#endif
+
+#ifdef ECAL_OS_LINUX
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#endif
+
 #include <stddef.h>
+#include <string>
 
 namespace eCAL
 {
