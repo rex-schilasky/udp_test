@@ -11,7 +11,7 @@ constexpr auto UDP_RCVBUF   = (1*1024*1024)   /* 1 MByte */;
 // globals
 eCAL::CUDPReceiver  g_udp_receiver;
 CHRTimer            g_timer;
-const int           g_rcv_buf_size(1024) /* 1 kByte */;
+const int           g_rcv_buf_size(32*1024) /* 32 kByte */;
 long long           g_rcv_buf[g_rcv_buf_size / sizeof(long long)];
 long long           g_rcv_index = 0;
 long long           g_rcv_msgs = 0;

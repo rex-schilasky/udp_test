@@ -14,7 +14,7 @@ constexpr auto UDP_SNDBUF   = (1*1024*1024) /* 1 MByte */;
 eCAL::CUDPSender    g_udp_sender;
 int                 g_snd_sleep_us(0);
 CHRTimer            g_timer;
-const int           g_snd_buf_size(1024) /* 1 kByte */;
+const int           g_snd_buf_size(32*1024) /* 32 kByte */;
 long long           g_snd_buf[g_snd_buf_size / sizeof(long long)];
 long long           g_snd_index = 0;
 long long           g_snd_msgs = 0;
