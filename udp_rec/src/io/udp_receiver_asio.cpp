@@ -115,14 +115,14 @@ namespace eCAL
     {
       // join multicast group
 #ifdef __linux__
-      if (eCAL::Config::IsUdpMulticastJoinAllIfEnabled())
-      {
-        if (!set_socket_mcast_group_option(m_socket.native_handle(), ipaddr_, MCAST_JOIN_GROUP))
-        {
-          return(false);
-        }
-      }
-      else
+      //if (eCAL::Config::IsUdpMulticastJoinAllIfEnabled())
+      //{
+      //  if (!set_socket_mcast_group_option(m_socket.native_handle(), ipaddr_, MCAST_JOIN_GROUP))
+      //  {
+      //    return(false);
+      //  }
+      //}
+      //else
 #endif
       {
         asio::error_code ec;
@@ -151,14 +151,14 @@ namespace eCAL
     {
       // Leave multicast group
 #ifdef __linux__
-      if (eCAL::Config::IsUdpMulticastJoinAllIfEnabled())
-      {
-        if (!set_socket_mcast_group_option(m_socket.native_handle(), ipaddr_, MCAST_LEAVE_GROUP))
-        {
-          return(false);
-        }
-      }
-      else
+      //if (eCAL::Config::IsUdpMulticastJoinAllIfEnabled())
+      //{
+      //  if (!set_socket_mcast_group_option(m_socket.native_handle(), ipaddr_, MCAST_LEAVE_GROUP))
+      //  {
+      //    return(false);
+      //  }
+      //}
+      //else
 #endif
       {
         asio::error_code ec;
